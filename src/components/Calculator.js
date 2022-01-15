@@ -6,7 +6,7 @@ import classes from './Calculator.module.css';
 import Input from './Buttons/Input';
 import calculate from './logic/calculate';
 
-function Calculator() {
+const Calculator = () => {
   const [currentInnerText, setInnerText] = useState('');
   const [calc, setCalc] = useState({});
   const changeHandler = (e) => {
@@ -24,6 +24,6 @@ function Calculator() {
       <SimpleOperations onclick={changeHandler} />
     </div>
   );
-}
+};
 
 export default Calculator;

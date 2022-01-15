@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import classes from './Numbers.module.css';
 
-function Numbers(props) {
+const Numbers = (props) => {
   const numbers = Array.from(Array(10).keys());
   numbers.reverse();
   const { onclick } = props;
@@ -22,7 +22,7 @@ function Numbers(props) {
       </ul>
     </div>
   );
-}
+};
 
 Numbers.propTypes = {
   onclick: PropTypes.func.isRequired,
