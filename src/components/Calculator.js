@@ -13,7 +13,7 @@ const Calculator = () => {
     const buttonName = e.target.name;
     const newCalc = calculate(calc, buttonName);
     setCalc(newCalc);
-    setInnerText(`${newCalc.next ? newCalc.next : ''} ${newCalc.operation ? newCalc.operation : ''} ${newCalc.total ? newCalc.total : ''}`);
+    setInnerText(`${newCalc.total ? newCalc.total : ''} ${newCalc.operation ? newCalc.operation : ''} ${newCalc.next ? newCalc.next : ''}`);
   };
 
   return (
