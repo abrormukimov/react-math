@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import classes from './SimpleOperations.module.css';
 
-function SimpleOperations(props) {
+const SimpleOperations = (props) => {
   const { onclick } = props;
   return (
     <div className={classes.div}>
@@ -29,7 +29,7 @@ function SimpleOperations(props) {
       </ul>
     </div>
   );
-}
+};
 
 SimpleOperations.propTypes = {
   onclick: PropTypes.func.isRequired,
