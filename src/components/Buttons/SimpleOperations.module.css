@@ -1,0 +1,25 @@
+.div {
+  grid-column: 2;
+  grid-row-end: 4;
+  grid-row-start: 2;
+}
+
+.ul {
+  margin: 0;
+  padding: 0;
+}
+
+.ul li {
+  background-color: #f5913e;
+  border: 1px;
+  border-color: #d1d1d1;
+  border-style: solid;
+}
+
+.ul li button {
+  background-color: #f5913e;
+  width: 2rem;
+  padding: 2rem 3rem 33.8px 45px;
+  border-color: #d1d1d1;
+  border-style: solid;
+}
