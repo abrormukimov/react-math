@@ -1,8 +1,7 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import PropTypes from 'prop-types';
 import classes from './Numbers.module.css';
 
-const Numbers = (props) => {
+function Numbers(props) {
   const numbers = Array.from(Array(10).keys());
   numbers.reverse();
   const { onclick } = props;
@@ -22,7 +21,7 @@ const Numbers = (props) => {
       </ul>
     </div>
   );
-};
+}
 
 Numbers.propTypes = {
   onclick: PropTypes.func.isRequired,

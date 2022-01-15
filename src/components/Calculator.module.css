@@ -1,4 +1,31 @@
 .container {
   display: -ms-grid;
   display: grid;
+  width: 24rem;
+  margin-right: 3rem;
+  float: right;
+}
+
+.popup {
+  display: none;
+}
+
+.wind {
+  display: block;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.div {
+  display: none;
+  background-color: white;
+}
+
+.shadow {
+  background-color: rgba(0, 0, 0, 0.486);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
