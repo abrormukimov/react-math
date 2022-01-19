@@ -23,6 +23,7 @@
 .ul .Zero {
   order: 9;
   width: 12.2rem;
+  height: 5.1rem;
 }
 
 .ul .dot {
@@ -32,12 +33,13 @@
   padding: 2rem 3rem 2rem 3rem;
   border-color: #d1d1d1;
   border-style: solid;
+  height: 5.3rem;
 }
 
 .ul li button {
   background-color: #e0e0e0;
   width: 2rem;
-  padding: 2rem 3rem 33.4px 45px;
+  padding: 2rem 3rem 34.4px 45px;
   border-color: #d1d1d1;
   border-style: solid;
 }
@@ -45,4 +47,5 @@
 .ul .Zero button {
   order: 9;
   width: 12.2rem;
+  height: 5.1rem;
 }

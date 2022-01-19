@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import classes from './CalculatorOperations.module.css';
 
-const CalculatorOperations = (props) => {
+function CalculatorOperations(props) {
   const { onclick } = props;
   return (
     <div className={classes.div}>
@@ -12,8 +12,7 @@ const CalculatorOperations = (props) => {
       </ul>
     </div>
   );
-};
-
+}
 CalculatorOperations.propTypes = {
   onclick: PropTypes.func.isRequired,
 };
