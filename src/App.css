@@ -1,0 +1,32 @@
+body {
+  padding: 0 30px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links > * {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.page-content {
+  min-width: 200px;
+  width: 70%;
+  margin: 80px auto;
+}
+
+.calculator {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.calculator h2 {
+  margin: 0;
+}
