@@ -1,34 +1,40 @@
-import React, { useState } from 'react';
-import CalculatorOperations from './Buttons/CalculatorOperations';
-import Numbers from './Buttons/Numbers';
-import SimpleOperations from './Buttons/SimpleOperations';
-import classes from './Calculator.module.css';
-import Input from './Buttons/Input';
-import calculate from './logic/calculate';
-import Header from './Pages/Header';
-import Popup from './Pages/Popup';
+import { useState } from 'react';
+import Row from './Row';
+import calculate from '../logic/calculate';
+import './Calculator.css';
 
-function Calculator() {
-  const [currentInnerText, setInnerText] = useState('');
-  const [calc, setCalc] = useState({});
-  const changeHandler = (e) => {
-    const buttonName = e.target.name;
-    const newCalc = calculate(calc, buttonName);
-    setCalc(newCalc);
-    setInnerText(`${newCalc.next ? newCalc.next : ''} ${newCalc.operation ? newCalc.operation : ''} ${newCalc.total ? newCalc.total : ''}`);
+const Calculator = () => {
+  const [calcObj, setCalcObj] = useState({});
+  const { next, total } = calcObj;
+
+  const buttons = [
+    ['AC', '+/-', '%', '÷'],
+    ['7', '8', '9', 'x'],
+    ['4', '5', '6', '-'],
+    ['1', '2', '3', '+'],
+    ['0', '.', '='],
+  ];
+
+  const handleCalc = (e) => {
+    const buttonName = e.target.textContent;
+    const newState = calculate(calcObj, buttonName);
+    setCalcObj(Object.assign(newState));
   };
+
   return (
-    <div>
-      <Header />
-      <Popup />
-      <div className={classes.container}>
-        <Input value={currentInnerText} />
-        <CalculatorOperations onclick={changeHandler} />
-        <Numbers onclick={changeHandler} />
-        <SimpleOperations onclick={changeHandler} />
+    <div id="calculator">
+      <div id="display-calc">
+        {(next == null) ? total : next}
+      </div>
+
+      <div id="calc-buttons">
+        {buttons.map((row) => (
+          <Row key={row} rowButtons={row} handleCalc={() => handleCalc} />
+        ))}
       </div>
     </div>
+
   );
-}
+};
 
 export default Calculator;
